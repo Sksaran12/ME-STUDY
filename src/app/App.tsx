@@ -2,15 +2,14 @@
 // EASY TO EDIT - VANILLA STYLE CODE
 // No complex React - just simple JavaScript!
 // ========================================
-import heroImage from "../imports/image.png";
-import floatingImage from "../imports/image.png";
-import logo from "../imports/logo.jpg";
-import gateImage from "../imports/gate-mechanical.png";
-import eseImage from "../imports/gate-ece.png";
-import psuImage from "../imports/gate-computer.png";
-import thermoImage from "../imports/gate-civil.png";
-import cadImage from "../imports/gate-electrical.png";
-// import fluidImage from "../imports/fluid.png";
+import heroImage from "../assets/image.png";
+import floatingImage from "../assets/image.png";
+import logo from "../assets/logo.jpg";
+import gateImage from "../assets/gate-mechanical.png";
+import eseImage from "../assets/gate-ece.png";
+import psuImage from "../assets/gate-computer.png";
+import thermoImage from "../assets/gate-civil.png";
+import cadImage from "../assets/gate-electrical.png";
 import { useState } from "react";
 import "./styles.css";
 
@@ -505,7 +504,7 @@ export default function App() {
           <div className="floating-boxes">
             <div className="floating-box-track">
               <img
-                src="src/imports/image.png"
+                src="src/assets/image.png"
                 alt="Mechanical"
                 className="floating-image"
               />
@@ -514,7 +513,7 @@ export default function App() {
                 ⚙️
               </div>
               <img
-                src="src/imports/logo.jpg"
+                src="src/assets/logo.jpg"
                 alt="Mechanical"
                 className="floating-image"
               />
@@ -553,7 +552,7 @@ export default function App() {
             </div>
             <div className="hero-image-container">
               <img
-                src="src/imports/image.png"
+                src="src/assets/image.png"
                 alt="Learning"
                 className="hero-image"
               />
@@ -855,7 +854,7 @@ export default function App() {
                   <div className="reviewer-info">
                     <div className="reviewer-avatar">
                       <img
-                        src="src/imports/image.png"
+                        src="src/assets/image.png"
                         alt={review.name}
                       />
                     </div>
