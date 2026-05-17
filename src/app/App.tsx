@@ -3,7 +3,7 @@
 // No complex React - just simple JavaScript!
 // ========================================
 import heroImage from "../assets/image.png";
-import floatingImage from "../assets/logo.png";
+import floatingImage from "../assets/logo.jpg";
 import logo from "../assets/logo.jpg";
 import gateImage from "../assets/gate-mechanical.png";
 import eseImage from "../assets/gate-ece.png";
