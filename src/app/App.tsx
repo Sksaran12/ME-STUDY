@@ -2,7 +2,15 @@
 // EASY TO EDIT - VANILLA STYLE CODE
 // No complex React - just simple JavaScript!
 // ========================================
-
+import heroImage from "../imports/image.png";
+import floatingImage from "../imports/image.png";
+import logo from "../imports/logo.jpg";
+import gateImage from "../imports/gate-mechanical.png";
+import eseImage from "../imports/gate-ece.png";
+import psuImage from "../imports/gate-computer.png";
+import thermoImage from "../imports/gate-civil.png";
+import cadImage from "../imports/gate-electrical.png";
+// import fluidImage from "../imports/fluid.png";
 import { useState } from "react";
 import "./styles.css";
 
@@ -22,6 +30,7 @@ export default function App() {
       title: "GATE Mechanical Engineering Complete Course",
       teacher: "Dr. Rajesh Kumar",
       type: "gate",
+      image: gateImage,
       stars: 4.9,
       students: 12500,
       price: 4999,
@@ -42,6 +51,7 @@ export default function App() {
       teacher: "Prof. Anita Sharma",
       type: "ese",
       stars: 4.8,
+      image: eseImage,
       students: 8900,
       price: 5999,
       oldPrice: 11999,
@@ -61,6 +71,7 @@ export default function App() {
       teacher: "Er. Vikram Singh",
       type: "psu",
       stars: 4.7,
+      image: gateImage,
       students: 6700,
       price: 3999,
       oldPrice: 7999,
@@ -79,6 +90,7 @@ export default function App() {
       title: "Thermodynamics Mastery Course",
       teacher: "Dr. Suresh Patel",
       type: "subject",
+       image: eseImage,
       stars: 4.9,
       students: 15200,
       price: 1999,
@@ -99,6 +111,7 @@ export default function App() {
       teacher: "Er. Priya Mehta",
       type: "subject",
       stars: 4.8,
+      image: eseImage,
       students: 9500,
       price: 2499,
       oldPrice: 4999,
@@ -118,6 +131,7 @@ export default function App() {
       teacher: "Dr. Arun Verma",
       type: "subject",
       stars: 4.9,
+      image: gateImage,
       students: 11000,
       price: 1999,
       oldPrice: 3999,
@@ -231,19 +245,10 @@ export default function App() {
 
       {/* ===== HEADER / NAVIGATION ===== */}
       <header className="header">
-        <div className="container header-content">
-          <div className="logo">
-            <svg
-              className="logo-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-            >
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
-            <span className="logo-text">ME Study</span>
-          </div>
+        <div className="container header-content">    
+         <div className="logo">
+        <img src={logo} alt="ME Study logo" className="logo-image" />
+        </div>
 
           <nav className="nav-desktop">
             <a href="#home" className="nav-link">
@@ -500,7 +505,7 @@ export default function App() {
           <div className="floating-boxes">
             <div className="floating-box-track">
               <img
-                src="src/imports/image-1.png"
+                src="src/imports/image.png"
                 alt="Mechanical"
                 className="floating-image"
               />
@@ -509,7 +514,7 @@ export default function App() {
                 ⚙️
               </div>
               <img
-                src="src/imports/image-1.png"
+                src="src/imports/logo.jpg"
                 alt="Mechanical"
                 className="floating-image"
               />
@@ -530,7 +535,7 @@ export default function App() {
               <div className="search-bar">
                 <input
                   type="text"
-                  placeholder="e.g. blogging"
+                  placeholder="Courses"
                   className="search-input"
                 />
                 <button className="btn-search">Search</button>
@@ -728,10 +733,10 @@ export default function App() {
             {displayCourses.map((course) => (
               <div key={course.id} className="course-card">
                 <div className="course-image">
-                  <img
-                    src="src/imports/image-1.png"
-                    alt={course.title}
-                  />
+                 <img
+                    src={course.image}
+                     alt={course.title}
+                    />
                   <div className="course-badge">
                     {course.difficulty}
                   </div>
@@ -924,16 +929,7 @@ export default function App() {
           <div className="footer-top">
             <div className="footer-column footer-brand">
               <div className="footer-logo">
-                <svg
-                  className="logo-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                >
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                </svg>
-                <span className="logo-text">ME Study</span>
+                <img src={logo} alt="ME Study Logo" className="logo-image" />
               </div>
               <p className="footer-description">
                 Empowering mechanical engineering students to
@@ -1084,7 +1080,7 @@ export default function App() {
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                   </svg>
-                  <span>Delhi, India</span>
+                  <span>Guwahati, Assam</span>
                 </li>
                 <li>
                   <svg
@@ -1111,7 +1107,7 @@ export default function App() {
                   >
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
-                  <span>+91 98765 43210</span>
+                  <span>+91 9435639773</span>
                 </li>
               </ul>
             </div>
